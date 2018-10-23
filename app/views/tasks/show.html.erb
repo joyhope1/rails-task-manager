@@ -1,0 +1,10 @@
+<h1><%= @task.title %></h1>
+<p><%= @task.details %></p>
+<h4>This task is completed</h4>
+<p><%= @task.completed %></p>
+<a href="/tasks/">Back to list</a>
+<a href="<%= task_edit_path(@task) %>" class="btn-treehouse">Edit this task</a>
+<%= link_to "Delete", task_path(@task),
+      method: :delete,
+      data: { confirm: "Are you sure?" } %>
+
